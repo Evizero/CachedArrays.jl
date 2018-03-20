@@ -1,0 +1,5 @@
+module CachedArrays
+
+# package code goes here
+
+end # module
