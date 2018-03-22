@@ -20,6 +20,7 @@ struct InMemoryCachedArray{T,N,A} <: AbstractArray{T,N} where {A <: AbstractArra
     end
 end
 
+Base.parent(A::InMemoryCachedArray) = A.parent
 Base.size(A::InMemoryCachedArray) = size(A.parent)
 
 Base.@propagate_inbounds function Base.getindex(A::InMemoryCachedArray{T}, I::Int...) where T
